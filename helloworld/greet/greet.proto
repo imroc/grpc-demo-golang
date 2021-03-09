@@ -1,0 +1,11 @@
+syntax = "proto3";
+package greet;
+option go_package = "helloworld/greet";
+
+message Message {
+    string body = 1;
+}
+
+service GreetService {
+    rpc Greet(Message) returns (Message) {}
+}
